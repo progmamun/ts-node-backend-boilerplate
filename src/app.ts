@@ -15,7 +15,9 @@ const app: Application = express();
 
 app.enable('trust proxy');
 
+// 1) GLOBAL MIDDLEWARE
 app.use(cors());
+app.options('*', cors());
 
 // Set security HTTP headers
 app.use(helmet());
@@ -61,9 +63,6 @@ app.get('/', (req: Request, res: Response) => {
   res.send('Ts Server is running..');
 });
 
-//global error handler
-app.use(globalErrorHandler);
-
 //handle not found
 app.use((req: Request, res: Response, next: NextFunction) => {
   res.status(httpStatus.NOT_FOUND).json({
@@ -78,5 +77,8 @@ app.use((req: Request, res: Response, next: NextFunction) => {
   });
   next();
 });
+
+//global error handler
+app.use(globalErrorHandler);
 
 export default app;
