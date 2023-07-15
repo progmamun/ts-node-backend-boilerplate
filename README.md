@@ -28,8 +28,8 @@
 - yarn add @types/jsonwebtoken
 - yarn add cookie-parser
 - yarn add @types/cookie-parser
-- yarn add bcryptjs
-- yarn add @types/bcryptjs
+- yarn add bcrypt
+- yarn add @types/bcrypt
 
 ---
 
