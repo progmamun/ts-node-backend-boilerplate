@@ -19,6 +19,8 @@
 ---
 
 - yarn add http-status
+- yarn add compression
+- yarn add -D @types/compression
 
 ---
 
@@ -34,5 +36,5 @@
 - yarn add express-mongo-sanitize
 - yarn add helmet
 - yarn add express-rate-limit
-- yarn add compression
-- yarn add -D @types/compression
+- yarn add hpp
+- yarn add -D @types/hpp
